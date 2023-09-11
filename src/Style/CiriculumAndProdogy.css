@@ -22,3 +22,14 @@
     top:100px;
     z-index:-1;
 }
+#courseText0{
+    text-transform: capitalize;
+    font-size: 17px;
+}
+#courseText0>h4{
+  
+    font-size: 25px;
+}
+#courseText0 span{
+    color:  #ed0331;
+}
