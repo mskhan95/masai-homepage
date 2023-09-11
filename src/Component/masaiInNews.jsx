@@ -1,6 +1,7 @@
 import React from "react";
+import { useState, useEffect, useRef } from "react";
 import "../Style/masaiInNews.css";
-function MasaiInNews(props) {
+function MasaiInNews({setActiveCourse,activeCourse}) {
   return (
     <div>
       <h2 className="masaiInNewsHeading">

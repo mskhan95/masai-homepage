@@ -6,40 +6,41 @@ import courseImgage2 from "../Image/course-image2.webp"
 import courseImgage3 from "../Image/course-image3.webp"
 import courseImgage4 from "../Image/course-image4.webp"
 import courseImgage5 from "../Image/course-image5.webp"
-function CiriculumAndProdogy(props) {
-    const [activeCourse, setActiveCourse] = useState(0);
+function CiriculumAndProdogy({setActiveCourse,activeCourse}) {
+    
     const courseDivRef = useRef();
     const courseRefs = [useRef(), useRef(), useRef(), useRef(), useRef()];
 
     useEffect(() => {
-      const handleScroll = () => {
-        const courseDiv = courseDivRef.current;
-  
-        if (courseDiv) {
-          const scrollPosition = courseDiv.scrollTop;
-  
-          // Determine which course section is in view based on scroll position
-          const courseHeight = courseDiv.scrollHeight / 5; // Assuming 5 course sections
-          const newActiveCourse = Math.floor(scrollPosition / courseHeight);
-  
-          // Update the active course if it has changed
-          if (newActiveCourse !== activeCourse) {
-            setActiveCourse(newActiveCourse);
+        const handleScroll = () => {
+          const courseDiv = courseDivRef.current;
+    
+          if (courseDiv) {
+            const scrollPosition = courseDiv.scrollTop;
+    
+            
+            const imageAppearThreshold = 300;
+    
+            if (scrollPosition >= imageAppearThreshold) {
+              setActiveCourse(0); 
+            } else {
+              setActiveCourse(-1); 
+            }
           }
-        }
-      };
-  
-      if (courseDivRef.current) {
-        // Add scroll event listener to the course-div
-        courseDivRef.current.addEventListener("scroll", handleScroll);
-  
-        // Remove the event listener when the component unmounts
-        return () => {
-          courseDivRef.current.removeEventListener("scroll", handleScroll);
         };
-      }
-    }, [activeCourse]);
-    useEffect(() => {
+    
+        if (courseDivRef.current) {
+          // Add scroll event listener to the course-div
+          courseDivRef.current.addEventListener("scroll", handleScroll);
+    
+          // Remove the event listener when the component unmounts
+          return () => {
+            courseDivRef.current.removeEventListener("scroll", handleScroll);
+          };
+        }
+      }, []);
+    
+      useEffect(() => {
         const options = {
           root: null,
           rootMargin: "0px",
@@ -49,7 +50,9 @@ function CiriculumAndProdogy(props) {
         const handleIntersection = (entries) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
-              setActiveCourse(parseInt(entry.target.id.replace("courseText", ""), 10));
+              setActiveCourse(
+                parseInt(entry.target.id.replace("courseText", ""), 10)
+              );
             }
           });
         };
@@ -64,6 +67,7 @@ function CiriculumAndProdogy(props) {
           observer.disconnect();
         };
       }, []);
+      
     
   return (
     <div>
@@ -87,8 +91,8 @@ function CiriculumAndProdogy(props) {
           />
         </span>{" "}
       </h2>
-      <div id="allScrolldivs">
-        <div className="course-div" ref={courseDivRef}> <div id="courseText0"ref={courseRefs[0]}>
+      <div id="allScrolldivs" >
+        <div className="course-div"ref={courseDivRef} > <div id="courseText0"ref={courseRefs[0]}>
           <h4>100% <span>live</span> distance learning</h4>
           <p >
             India’s only live tech-learning course with Tier 1 <br /> instructors. Get
@@ -153,7 +157,9 @@ function CiriculumAndProdogy(props) {
               key={index}
               src={image}
               alt="course"
-              style={{ opacity: index === activeCourse ? 1 : 0 }}
+              style={{
+                opacity: activeCourse === null || activeCourse === index ? 1 : 0,
+              }}
             />
           ))}
         </div>
