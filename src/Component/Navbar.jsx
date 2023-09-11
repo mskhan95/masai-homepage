@@ -1,70 +1,75 @@
-import React from 'react'
-
-function Navbar() {
+import React from "react";
+import "./Navbar.css";
+const Navbar = () => {
   return (
-    <div>
-    <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-      <div className="container-fluid">
-      <p className="navbar-brand" >
-         logo
-        </p>
-        <p className="navbar-brand" >
-          COURSES
-        </p>
+    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <img
+        src="https://masai-website-images.s3.ap-south-1.amazonaws.com/logo.png"
+        alt=""
+      />
+      <br />
+      <button
+        className="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span className="navbar-toggler-icon"></span>
+      </button>
 
-        <p className="navbar-brand" >
-          FEES
-        </p>
+      <div className="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul className="navbar-nav mr-auto">
+          <div className="middle-part">
+          <li className="nav-item active">
+            <a className="nav-link" href="#">
+              COURSES <span className="sr-only"></span>
+            </a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" href="#">
+              FEES
+            </a>
+          </li>
 
-        <p className="navbar-brand" >
-          EVENTS
-        </p>
+          <li className="nav-item">
+            <a className="nav-link" href="#">
+              EVENTS
+            </a>
+          </li>
 
-        <p className="navbar-brand" >
-          LEARN
-        </p>
-
-
-        <p className="navbar-brand" >
-         SUCCESS STORIES
-        </p>
-
-        <p className="navbar-brand" >
-          HIRE FROM US
-        </p>
-
-
-        <p className="navbar-brand" >
-         SUCCESS STORIES
-        </p>
-        {/* <a href="/" className="navbar-brand"> Student Management App</a>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon">REFER & EARN</span>
-        </button> */}
-
-          <p className="btn btn-outline-light" >
-            REFER & EARN
-          </p>
-
-          <p className="btn btn-outline-light" >
-            SIGN UP
-          </p>
-
-
-
-        
+          <li className="nav-item">
+            <a className="nav-link" href="#">
+              LEARN
+            </a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" href="#">
+              SUCCESS STORIES
+            </a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" href="#">
+              HIRE FROM US
+            </a>
+          </li>
+          </div>
+          <div className="left-content">
+            <li className="nav-item">
+              <a className="nav-link" href="#">
+                REFER & EARN
+              </a>
+            </li>
+            <li className="nav-item">
+              <button className="signup"> SIGN UP</button>
+            </li>
+          </div>
+        </ul>
       </div>
     </nav>
-  </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
