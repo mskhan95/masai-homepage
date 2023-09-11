@@ -10,7 +10,7 @@
  color:  #ed0331;
 }
 .masaiInNewsHeading >span >img{
-   position: absolute;
+   position: relative;
    width: 264px;
    height: 7px;
    left: 690px;

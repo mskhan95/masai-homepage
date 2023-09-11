@@ -1,0 +1,40 @@
+.CareerPossibility >h2{
+   
+    font-size: 37px;
+}
+.CareerPossibility span{
+   
+    color:  #ed0331;
+}
+.VectorLine{
+    position: absolute;
+    width: 264px;
+    height: 7px;
+    left: -12px;
+    top:86px
+}
+#upperDiv{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.DreamCareerContainer{
+    font-size: 25px;
+    font-weight: 500;
+}
+.aboutDetails{
+    font-size: 17px;
+    
+}
+.button_div_for_apply_Now >button{
+    padding: 15px 20px;
+    border-radius: 8px;
+    border: none;
+    background-color: #ed0331;
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family:sans-serif;
+
+}
