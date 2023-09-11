@@ -41,19 +41,7 @@ function App() {
 
      
 
-=======
-     <Navbar/>
-      {/* <CiriculumAndProdogy/> */}
-    {/* <MasaiInNews/> */}
-    <CarrearPossibility/>
-    
-    {/* <Desktop/> */}
-  <Our_courses/>
-
-  <Footer/>
-   </div>
->>>>>>> 1de46aeb928e359321d886be4021e45a242ed1fe
-  );
+  )
 }
 
 export default App;
