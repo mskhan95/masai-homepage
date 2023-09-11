@@ -1,0 +1,33 @@
+.masaiInNewsHeading {
+  
+  
+    text-align: center;
+    
+    align-items: center;
+    font-size: 50px;
+}
+.masaiInNewsHeading >span{
+ color:  #ed0331;
+}
+.masaiInNewsHeading >span >img{
+   position: absolute;
+   width: 264px;
+   height: 7px;
+   left: 690px;
+   top:100px
+   }
+   .all_Image{
+    display: flex;
+    justify-content: center;
+    gap: 65px;
+    align-items: center;
+   }
+   .all_Image img{
+    max-width: 370px;
+   }
+    .all_Image  h4{
+    font-size: 20px !important;
+   }
+   .all_Image div{
+    width: 400px;
+   }
