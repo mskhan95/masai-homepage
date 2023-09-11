@@ -1,0 +1,24 @@
+
+.OurParterHeading{
+    text-align:center;
+    line-height:5px;
+  
+}
+.childImage{
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin: 20px;
+    width: 120px;
+    height: fit-content;
+
+}
+.childImage img {
+    border-radius: 20px;
+    width: 120px;
+}
+.textColor{
+    color:#ED0331
+}
+.Image{
+    width: 150px;
+}
