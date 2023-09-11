@@ -33,3 +33,87 @@
 #courseText0 span{
     color:  #ed0331;
 }
+#courseText4{
+    text-transform: capitalize;
+    font-size: 17px;
+}
+#courseText4>h4{
+  
+    font-size: 25px;
+}
+#courseText4 span{
+    color:  #ed0331;
+}
+#courseText4{
+    text-transform: capitalize;
+    font-size: 17px;
+}
+#courseText4>h4{
+  
+    font-size: 25px;
+}
+#courseText4 span{
+    color:  #ed0331;
+}
+#courseText1{
+    text-transform: capitalize;
+    font-size: 17px;
+}
+#courseText1>h4{
+  
+    font-size: 25px;
+}
+#courseText1 span{
+    color:  #ed0331;
+}
+#courseText2{
+    text-transform: capitalize;
+    font-size: 17px;
+}
+#courseText2>h4{
+  
+    font-size: 25px;
+}
+#courseText2 span{
+    color:  #ed0331;
+}
+#courseText3{
+    text-transform: capitalize;
+    font-size: 17px;
+}
+#courseText3>h4{
+  
+    font-size: 25px;
+}
+#courseText3 span{
+    color:  #ed0331;
+}
+#allScrolldivs{
+    display: flex;
+   justify-content: space-around;
+   margin: auto;
+   
+}
+#courseImage{
+    display: flex;
+    flex-direction: column;
+    
+    
+
+}
+#courseImage img{
+width: 600px;
+border-radius: 24px;
+position: fixed;
+right: 20px;
+
+
+}
+.course-div{
+    display: flex;
+    flex-direction: column;
+    gap:500px;
+    height:3200px;
+}
+
+
