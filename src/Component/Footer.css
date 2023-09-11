@@ -1,0 +1,24 @@
+.footer {
+    background-color: #000000;
+    color: #fff;
+    padding: 20px 0;
+  }
+  
+  .footer-columns {
+    display: flex;
+    
+    align-items: center; /* Center align columns horizontally */
+  }
+  
+  .footer-column {
+    flex: 1; /* Equal width columns */
+    padding: 0 20px;
+  }
+  
+  .footer-column h3 {
+    font-size: 18px;
+  }
+  
+  .footer-column p {
+    font-size: 14px;
+  }
