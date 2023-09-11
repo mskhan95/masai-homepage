@@ -1,22 +1,25 @@
 import './App.css';
+import { useState} from "react";
+import MasaiInNews from './Component/masaiInNews';
+import CiriculumAndProdogy from './Component/CiriculumAndProdogy';
 
-
-// import MasaiInNews from './Component/masaiInNews';
-// import CiriculumAndProdogy from './Component/CiriculumAndProdogy';
-// import Navbar from './Component/Navbar';
  import Desktop from './Component/Desktop'
 import Our_courses from './Component/Our_courses';
   
 import CarrearPossibility from './Component/CarrearPossibility';
 function App() {
+  const [activeCourse, setActiveCourse] = useState(null);
   return (
     <div className="App">
-      {/* <CiriculumAndProdogy/> */}
-    {/* <MasaiInNews/> */}
+       <Desktop/>
+       <Our_courses activeCourse={activeCourse}setActiveCourse={setActiveCourse} />
+      <CiriculumAndProdogy activeCourse={activeCourse}setActiveCourse={setActiveCourse}/>
+    <MasaiInNews activeCourse={activeCourse}setActiveCourse={setActiveCourse}/>
     <CarrearPossibility/>
-    {/* <Navbar/> */}
-    {/* <Desktop/> */}
-  <Our_courses/>
+
+   
+  
+</div>
   );
 }
 

@@ -3,8 +3,13 @@ import Our_courses_box from './Our_courses_box';
 import full_stack from '../Image/full_stack.png'
 import backend from '../Image/backend_image.png'
 import './Our_courses.css'
+import { useState, useEffect, useRef } from "react";
+function Our_courses({setActiveCourse,activeCourse}) {
 
-function Our_courses(props) {
+  useEffect(() =>{
+
+setActiveCourse(null);
+  },[])
     return (
         <div>
         <div className='mainheading'> <h1>Our Courses </h1></div>
