@@ -1,13 +1,15 @@
 import './App.css';
 // import MasaiInNews from './Component/masaiInNews';
-import CiriculumAndProdogy from './Component/CiriculumAndProdogy';
-import Our_courses from './Component/Our_courses';
+// import CiriculumAndProdogy from './Component/CiriculumAndProdogy';
+// import Navbar from './Component/Navbar';
+import CarrearPossibility from './Component/CarrearPossibility';
 function App() {
   return (
     <div className="App">
       {/* <CiriculumAndProdogy/> */}
-      <Our_courses/>
     {/* <MasaiInNews/> */}
+<CarrearPossibility/>
+    {/* <Navbar/> */}
     </div>
   );
 }
