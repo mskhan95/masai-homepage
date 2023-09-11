@@ -1,0 +1,12 @@
+
+.TopImgdiv>img{
+    max-width: 40%;
+    /* height: 30%; */
+    justify-content: center;
+}
+
+
+.list{
+    list-style-type: none;
+    margin:8px 0 0 6px
+}
