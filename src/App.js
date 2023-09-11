@@ -1,12 +1,11 @@
 import './App.css';
-import Desktop from './Component/Desktop'
-import Our_courses from './Component/Our_courses';
-
+// import MasaiInNews from './Component/masaiInNews';
+import CiriculumAndProdogy from './Component/CiriculumAndProdogy';
 function App() {
   return (
     <div className="App">
-      {/* <Desktop/> */}
-      <Our_courses/>
+      <CiriculumAndProdogy/>
+    {/* <MasaiInNews/> */}
     </div>
   );
 }

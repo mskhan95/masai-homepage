@@ -1,0 +1,35 @@
+.masaiInCiriculumHeading{
+    text-align: center;
+    
+    align-items: center;
+    font-size: 50px;
+}
+.masaiInCiriculumHeading >span{
+    color:  #ed0331;
+}
+.firstVector{
+    position: absolute;
+    width: 264px;
+    height: 15px;
+    left: 600px;
+    top:100px
+}
+.secondVector{
+    position: absolute;
+    width: 264px;
+    height: 15px;
+    left: 925px;
+    top:100px;
+    z-index:-1;
+}
+#courseText0{
+    text-transform: capitalize;
+    font-size: 17px;
+}
+#courseText0>h4{
+  
+    font-size: 25px;
+}
+#courseText0 span{
+    color:  #ed0331;
+}
