@@ -34,8 +34,12 @@ function App() {
        <Desktop/>
        <Our_courses activeCourse={activeCourse}setActiveCourse={setActiveCourse} />
        
-      {/* <CiriculumAndProdogy activeCourse={activeCourse}setActiveCourse={setActiveCourse}/> */}
-      <Tech_Community/>
+
+      <CiriculumAndProdogy activeCourse={activeCourse}setActiveCourse={setActiveCourse}/>
+      <Tech_Community activeCourse={activeCourse}setActiveCourse={setActiveCourse}/>
+
+    
+
       <Hiring_Partner/>
     <MasaiInNews activeCourse={activeCourse}setActiveCourse={setActiveCourse}/>
     <CarrearPossibility/>

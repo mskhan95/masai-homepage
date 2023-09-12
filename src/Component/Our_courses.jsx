@@ -8,16 +8,58 @@ import './Our_courses.css'
 import { useState, useEffect, useRef } from "react";
 function Our_courses({setActiveCourse,activeCourse}) {
 
-  useEffect(() =>{
+  const ourParterHeadingRef = useRef();
+  const mainHeadingRef = useRef();
 
-setActiveCourse(null);
-  },[])
+  useEffect(() => {
+    // Define a function to handle intersection
+    const handleIntersection = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          
+          setActiveCourse(null);
+        }
+      });
+    };
+
+    // Create an IntersectionObserver instance for "OurParterHeading"
+    const ourParterHeadingObserver = new IntersectionObserver(
+      handleIntersection
+    );
+
+    // Observe the "OurParterHeading" div if it exists
+    if (ourParterHeadingRef.current) {
+      ourParterHeadingObserver.observe(ourParterHeadingRef.current);
+    }
+
+    // Create an IntersectionObserver instance for "mainheading"
+    const mainHeadingObserver = new IntersectionObserver(handleIntersection);
+
+    // Observe the "mainheading" div if it exists
+    if (mainHeadingRef.current) {
+      mainHeadingObserver.observe(mainHeadingRef.current);
+    }
+
+    // Cleanup the observers when the component unmounts
+    return () => {
+      ourParterHeadingObserver.disconnect();
+      mainHeadingObserver.disconnect();
+    };
+  }, []);
+
     return (
+
+        <div >
+        <div className='mainheading' > <h1>Our Courses </h1></div>
+
+        <h2 className="mainheading2" >
+
         <div style={{marginTop:"50px"}}>
           <Box  style={{display: "flex", justifyContent:"center"}}>
         <Heading fontSize={'45px' }>Our Courses</Heading></Box>
         <div>
         <h3 className="mainheading2">
+
         Practice-Based Learning Tracks, 
         <span>
          Supercharged By A.I. 
@@ -35,9 +77,9 @@ setActiveCourse(null);
                 <Our_courses_box full_stack={backend} color={"#e5c9b7"} title={"Backend Development"}/>
             </div>
 
-            <div style={{display:"flex", justifyContent:"center", margin:"24px 0 24px 0" }}>
+            <div style={{display:"flex", justifyContent:"center", margin:"24px 0 24px 0" }} ref={mainHeadingRef}>
               <button className='viewAllCourses'>VIEW ALL COURSES</button>
-            </div>
+            </div >
         </div>
     );
 }

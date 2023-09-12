@@ -67,6 +67,45 @@ function CiriculumAndProdogy({setActiveCourse,activeCourse}) {
           observer.disconnect();
         };
       }, []);
+
+       const ourParterHeadingRef = useRef();
+  const mainHeadingRef = useRef();
+
+  useEffect(() => {
+    // Define a function to handle intersection
+    const handleIntersection = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          
+          setActiveCourse(null);
+        }
+      });
+    };
+
+    // Create an IntersectionObserver instance for "OurParterHeading"
+    const ourParterHeadingObserver = new IntersectionObserver(
+      handleIntersection
+    );
+
+    // Observe the "OurParterHeading" div if it exists
+    if (ourParterHeadingRef.current) {
+      ourParterHeadingObserver.observe(ourParterHeadingRef.current);
+    }
+
+    // Create an IntersectionObserver instance for "mainheading"
+    const mainHeadingObserver = new IntersectionObserver(handleIntersection);
+
+    // Observe the "mainheading" div if it exists
+    if (mainHeadingRef.current) {
+      mainHeadingObserver.observe(mainHeadingRef.current);
+    }
+
+    // Cleanup the observers when the component unmounts
+    return () => {
+      ourParterHeadingObserver.disconnect();
+      mainHeadingObserver.disconnect();
+    };
+  }, []);
       
     
   return (
@@ -159,6 +198,7 @@ function CiriculumAndProdogy({setActiveCourse,activeCourse}) {
               alt="course"
               style={{
                 opacity: activeCourse === null || activeCourse === index ? 1 : 0,
+                visibility: activeCourse === null ? 'hidden' : 'visible'
               }}
             />
           ))}
