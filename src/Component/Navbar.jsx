@@ -45,7 +45,7 @@ const Navbar = () => {
             ))}
           </ul>
           <div className="ml-auto Hstack">
-            <button className="btn btn1">REFER & EARN</button>
+            <button className="btn btn1 me-3">REFER & EARN</button>
             <button className="btn btn-outline-danger btn2">SIGN UP</button>
           </div>
         </div>
