@@ -5,7 +5,7 @@ import MasaiInNews from './Component/masaiInNews';
 import CiriculumAndProdogy from './Component/CiriculumAndProdogy';
 import {Tech_Community} from './Component/Tech_Community';
 import {Hiring_Partner} from "./Component/Hiring_Partner.jsx"
-
+import Certificate from './Component/certificate';
 
 
 // import MasaiInNews from './Component/masaiInNews';
@@ -37,6 +37,7 @@ function App() {
       <Hiring_Partner/>
     <MasaiInNews activeCourse={activeCourse}setActiveCourse={setActiveCourse}/>
     <CarrearPossibility/>
+    <Certificate/>
     <Footer/>
 
 
