@@ -62,7 +62,7 @@ export const Tech_Community = ({setActiveCourse,activeCourse}) => {
     ]
   return (
     <>
-        <Container>
+        <Container ref={mainHeadingRef}>
             
              <div className={Styled.OurParterHeading} ref={mainHeadingRef}>
                 <h1> Be A Part Of Our Thriving </h1>                    

@@ -46,10 +46,10 @@ function Our_courses({setActiveCourse,activeCourse}) {
   }, []);
 
     return (
-        <div>
-        <div className='mainheading' ref={mainHeadingRef}> <h1>Our Courses </h1></div>
+        <div >
+        <div className='mainheading' > <h1>Our Courses </h1></div>
 
-        <h2 className="mainheading2">
+        <h2 className="mainheading2" >
         Practice-Based Learning Tracks, 
         <span>
          Supercharged By A.I.
@@ -65,9 +65,9 @@ function Our_courses({setActiveCourse,activeCourse}) {
                 <Our_courses_box full_stack={backend} color={"#e5c9b7"} title={"Backend Development"}/>
             </div>
 
-            <div style={{display:"flex", justifyContent:"center", margin:"24px 0 24px 0" }}>
+            <div style={{display:"flex", justifyContent:"center", margin:"24px 0 24px 0" }} ref={mainHeadingRef}>
               <button className='viewAllCourses'>VIEW ALL COURSES</button>
-            </div>
+            </div >
         </div>
     );
 }
