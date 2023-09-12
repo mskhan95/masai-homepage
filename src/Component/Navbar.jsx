@@ -1,72 +1,54 @@
 import React from "react";
-import "./Navbar.css";
+import 'bootstrap/dist/css/bootstrap.min.css'; 
+import './Navbar.css'; 
+
 const Navbar = () => {
+  const links = [
+    { title: "COURSES" },
+    { title: "FEES" },
+    { title: "EVENTS" },
+    { title: "LEARN" },
+    { title: "SUCCESS STORIES" },
+    { title: "HIRE FROM US" },
+  ];
+
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <img
-        src="https://masai-website-images.s3.ap-south-1.amazonaws.com/logo.png"
-        alt=""
-      />
-      <br />
-      <button
-        className="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span className="navbar-toggler-icon"></span>
-      </button>
+    <nav className="navbar navbar-expand-lg navbar-light parent">
+      <div className="container mainparent">
+        <a className="navbar-brand" href="#">
+          <img
+            src="https://masai-website-images.s3.ap-south-1.amazonaws.com/logo.png"
+            alt="Logo"
+          />
+        </a>
 
-      <div className="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul className="navbar-nav mr-auto">
-          <div className="middle-part">
-          <li className="nav-item active">
-            <a className="nav-link" href="#">
-              COURSES <span className="sr-only"></span>
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">
-              FEES
-            </a>
-          </li>
+        <button
+          className="navbar-toggler drawer"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
 
-          <li className="nav-item">
-            <a className="nav-link" href="#">
-              EVENTS
-            </a>
-          </li>
-
-          <li className="nav-item">
-            <a className="nav-link" href="#">
-              LEARN
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">
-              SUCCESS STORIES
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">
-              HIRE FROM US
-            </a>
-          </li>
+        <div className="collapse navbar-collapse mainlink" id="navbarNav">
+          <ul className="navbar-nav">
+            {links.map((ele, i) => (
+              <li key={i} className="nav-item links">
+                <a className="nav-link" href="#">
+                  {ele.title}
+                </a>
+              </li>
+            ))}
+          </ul>
+          <div className="ml-auto Hstack">
+            <button className="btn btn1 me-3">REFER & EARN</button>
+            <button className="btn btn-outline-danger btn2">SIGN UP</button>
           </div>
-          <div className="left-content">
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                REFER & EARN
-              </a>
-            </li>
-            <li className="nav-item">
-              <button className="signup"> SIGN UP</button>
-            </li>
-          </div>
-        </ul>
+        </div>
       </div>
     </nav>
   );

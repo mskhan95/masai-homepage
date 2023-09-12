@@ -1,50 +1,83 @@
-.left-content {
-    margin-left: 150px;
-    display: flex;
+
+.parent {
+  
+  width: 100%;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  background-color: white;
 }
 
-/* Navbar.css */
+.mainparent {
+  margin-top: 15px;
+  position: sticky;
+  top: 0;
+  background-color: white;
+}
 
-/* Make all nav-link elements bold */
-.nav-link {
-    font-weight: bold;
-    color: rgb(90, 90, 90);
-    margin-right: 30px;
-    gap: 20px;
-    margin-left: 150px;
-  }
-  /* Hover effect for nav-link elements */
-.nav-link:hover {
-    color: red; /* Change text color to red on hover */
-  }
-  
-  /* Add a red border to the signup button */
-  .signup {
-    border: 2px solid red;
-    border-radius: 5px;
-    color: rgb(245, 70, 70); /* Change text color to red */
-  }
-  
+.mainparent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin: auto;
+  width: 95%;
+}
 
-  .signup:hover {
-    border: 2px solid red;
-    border-radius: 5px;
-    color: rgb(0, 0, 0); /* Change text color to red */
-  }
-  
+.links {
+  font-size: 14px;
+  letter-spacing: 1.25px;
+  line-height: 24px;
+  font-weight: 600;
+  padding: 12px;
+  text-align: center;
+  margin: auto;
+  cursor: pointer;
+  border-radius: 5px;
+}
 
-  .nav-link:first-child {
-    margin-left: 0; /* Remove left margin for the logo */
-  }
+.links::after {
+  color: #ed0331;
+  background-color: #fffafb;
+}
 
-  .middle-part {
+.btn1 {
+  color: rgba(110, 113, 204) !important;
+  background-color: #e5feff;
+  padding: 15px 10px 15px 10px;
+  border-radius: 8px;
+  letter-spacing: 1.2px;
+}
+
+.btn2 {
+  padding: 15px;
+}
+
+.btn2:hover {
+  background-color: #fffafb;
+}
+
+.drawer {
+  display: none;
+}
+
+.mainlink {
+  width: 60%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+
+@media screen and (max-width: 1000px) {
+  .drawer {
+    display: block;
+  }
+  .mainlink {
+    display: none;
+  }
+  .parent {
     display: flex;
-    margin-left: 60px;
   }
-  .navbar {
-    position: sticky;
-    top: 0;
-    z-index: 100; 
-    background-color: white; /* Optionally, you can set the background color */
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Add a shadow for better visibility */
-  }
+}
