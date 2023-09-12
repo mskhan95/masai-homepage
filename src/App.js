@@ -24,6 +24,12 @@ function App() {
   return (
     <div className="App">
 
+    
+
+    </div>
+  );
+
+
     <Navbar/>
        <Desktop/>
        <Our_courses activeCourse={activeCourse}setActiveCourse={setActiveCourse} />
@@ -42,6 +48,7 @@ function App() {
      
 
   )
+
 }
 
 export default App;
