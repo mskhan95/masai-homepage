@@ -49,41 +49,35 @@ function Our_courses({setActiveCourse,activeCourse}) {
 
     return (
 
-        <div >
-        <div className='mainheading' > <h1>Our Courses </h1></div>
+      <div style={{marginTop:"50px"}}>
+      <Box  style={{display: "flex", justifyContent:"center"}}>
+    <Heading fontSize={'45px' }>Our Courses</Heading></Box>
+    <div>
+    <h3 className="mainheading2">
+    Practice-Based Learning Tracks, 
+    <span>
+     Supercharged By A.I. 
+    </span> 
+  </h3>
+  <div style={{display:"flex", justifyContent:"center"}}>
+    <img
+        src={yellow_vector}
+        alt=""
+     /></div>
+  </div>
 
-        <h2 className="mainheading2" >
-
-        <div style={{marginTop:"50px"}}>
-          <Box  style={{display: "flex", justifyContent:"center"}}>
-        <Heading fontSize={'45px' }>Our Courses</Heading></Box>
-        <div>
-        <h3 className="mainheading2">
-
-        Practice-Based Learning Tracks, 
-        <span>
-         Supercharged By A.I. 
-        </span> 
-      </h3>
-      <div style={{display:"flex", justifyContent:"center"}}>
-        <img
-            src={yellow_vector}
-            alt=""
-         /></div>
-      </div>
-
-            <div className='courseContainer'>
-                <Our_courses_box full_stack={full_stack} color={"#b7b8e5"} title={"Full Stack Web Development"}/>
-                <Our_courses_box full_stack={backend} color={"#e5c9b7"} title={"Backend Development"}/>
-            </div>
-
-            <div style={{display:"flex", justifyContent:"center", margin:"24px 0 24px 0" }} ref={mainHeadingRef}>
-              <button className='viewAllCourses'>VIEW ALL COURSES</button>
-            </div >
+        <div className='courseContainer'>
+            <Our_courses_box full_stack={full_stack} color={"#b7b8e5"} title={"Full Stack Web Development"}/>
+            <Our_courses_box full_stack={backend} color={"#e5c9b7"} title={"Backend Development"}/>
         </div>
+
+        <div style={{display:"flex", justifyContent:"center", margin:"24px 0 24px 0" }} ref={mainHeadingRef}>
+          <button className='viewAllCourses'>VIEW ALL COURSES</button>
+        </div>
+    </div>
     );
 }
 
-// style={{width:"18%",border: "none",color: "white", borderRadius:"8px", margin:"32px 0 0 0" ,padding:"12px 16px" ,background:"#ED0331", fontWeight: "600!important", fontSize:"14px" }}
+
 
 export default Our_courses;

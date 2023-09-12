@@ -24,13 +24,7 @@ function App() {
   return (
     <div className="App">
 
-    
-
-    </div>
-  );
-
-
-    <Navbar/>
+<Navbar/>
        <Desktop/>
        <Our_courses activeCourse={activeCourse}setActiveCourse={setActiveCourse} />
        
@@ -45,13 +39,15 @@ function App() {
     <CarrearPossibility/>
     <Footer/>
 
+
+    </div>
+  );
+
+
+    
    
   
-</div>
 
-     
-
-  )
 
 }
 
