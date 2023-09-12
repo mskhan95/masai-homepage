@@ -24,12 +24,22 @@ function App() {
   return (
     <div className="App">
 
+    
+
+    </div>
+  );
+
+
     <Navbar/>
        <Desktop/>
        <Our_courses activeCourse={activeCourse}setActiveCourse={setActiveCourse} />
        
+
       <CiriculumAndProdogy activeCourse={activeCourse}setActiveCourse={setActiveCourse}/>
       <Tech_Community activeCourse={activeCourse}setActiveCourse={setActiveCourse}/>
+
+    
+
       <Hiring_Partner/>
     <MasaiInNews activeCourse={activeCourse}setActiveCourse={setActiveCourse}/>
     <CarrearPossibility/>
@@ -42,6 +52,7 @@ function App() {
      
 
   )
+
 }
 
 export default App;

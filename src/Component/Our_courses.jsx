@@ -1,7 +1,9 @@
 import React from 'react';
+import { Text, Heading, Box} from '@chakra-ui/react'
 import Our_courses_box from './Our_courses_box';
 import full_stack from '../Image/full_stack.png'
 import backend from '../Image/backend_image.png'
+import yellow_vector from '../Image/yellow-vector.svg'
 import './Our_courses.css'
 import { useState, useEffect, useRef } from "react";
 function Our_courses({setActiveCourse,activeCourse}) {
@@ -46,21 +48,31 @@ function Our_courses({setActiveCourse,activeCourse}) {
   }, []);
 
     return (
+
         <div >
         <div className='mainheading' > <h1>Our Courses </h1></div>
 
         <h2 className="mainheading2" >
+
+        <div style={{marginTop:"50px"}}>
+          <Box  style={{display: "flex", justifyContent:"center"}}>
+        <Heading fontSize={'45px' }>Our Courses</Heading></Box>
+        <div>
+        <h3 className="mainheading2">
+
         Practice-Based Learning Tracks, 
         <span>
-         Supercharged By A.I.
-          <img
-            src="https://www.masaischool.com/images/new-homepage/yellow-vector.svg"
+         Supercharged By A.I. 
+        </span> 
+      </h3>
+      <div style={{display:"flex", justifyContent:"center"}}>
+        <img
+            src={yellow_vector}
             alt=""
-          />
-        </span>
-      </h2>
+         /></div>
+      </div>
 
-            <div style={{display:"flex",margin:"2% 0 2% 0",gap:"3%",justifyContent:"center" }}>
+            <div className='courseContainer'>
                 <Our_courses_box full_stack={full_stack} color={"#b7b8e5"} title={"Full Stack Web Development"}/>
                 <Our_courses_box full_stack={backend} color={"#e5c9b7"} title={"Backend Development"}/>
             </div>
