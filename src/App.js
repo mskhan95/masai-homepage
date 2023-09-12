@@ -29,7 +29,7 @@ function App() {
        <Our_courses activeCourse={activeCourse}setActiveCourse={setActiveCourse} />
        
       <CiriculumAndProdogy activeCourse={activeCourse}setActiveCourse={setActiveCourse}/>
-      <Tech_Community/>
+      <Tech_Community activeCourse={activeCourse}setActiveCourse={setActiveCourse}/>
       <Hiring_Partner/>
     <MasaiInNews activeCourse={activeCourse}setActiveCourse={setActiveCourse}/>
     <CarrearPossibility/>

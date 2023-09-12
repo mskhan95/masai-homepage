@@ -159,6 +159,7 @@ function CiriculumAndProdogy({setActiveCourse,activeCourse}) {
               alt="course"
               style={{
                 opacity: activeCourse === null || activeCourse === index ? 1 : 0,
+                visibility: activeCourse === null ? 'hidden' : 'visible'
               }}
             />
           ))}

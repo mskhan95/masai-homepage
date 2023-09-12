@@ -3,8 +3,47 @@ import Styled from '../Style/TechCommunity.module.css'
 import Marquee from 'react-fast-marquee'
 import {Container} from 'reactstrap'
 import yellowVectore from '../Image/yellowVector.svg'
+import { useState, useEffect, useRef } from "react";
+export const Tech_Community = ({setActiveCourse,activeCourse}) => {
 
-export const Tech_Community = () => {
+  const ourParterHeadingRef = useRef();
+  const mainHeadingRef = useRef();
+
+  useEffect(() => {
+    // Define a function to handle intersection
+    const handleIntersection = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          
+          setActiveCourse(null);
+        }
+      });
+    };
+
+    // Create an IntersectionObserver instance for "OurParterHeading"
+    const ourParterHeadingObserver = new IntersectionObserver(
+      handleIntersection
+    );
+
+    // Observe the "OurParterHeading" div if it exists
+    if (ourParterHeadingRef.current) {
+      ourParterHeadingObserver.observe(ourParterHeadingRef.current);
+    }
+
+    // Create an IntersectionObserver instance for "mainheading"
+    const mainHeadingObserver = new IntersectionObserver(handleIntersection);
+
+    // Observe the "mainheading" div if it exists
+    if (mainHeadingRef.current) {
+      mainHeadingObserver.observe(mainHeadingRef.current);
+    }
+
+    // Cleanup the observers when the component unmounts
+    return () => {
+      ourParterHeadingObserver.disconnect();
+      mainHeadingObserver.disconnect();
+    };
+  }, []);
 
     const HiringPartner=[
         {image:"https://www.masaischool.com/images/new-homepage/community/community7.webp"},
@@ -25,7 +64,7 @@ export const Tech_Community = () => {
     <>
         <Container>
             
-             <div className={Styled.OurParterHeading}>
+             <div className={Styled.OurParterHeading} ref={mainHeadingRef}>
                 <h1> Be A Part Of Our Thriving </h1>                    
                 <h1 className={Styled.textColor}>Tech Community</h1>
                 <img src={yellowVectore} alt="" className={Styled.Image}/>
