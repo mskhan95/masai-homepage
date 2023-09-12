@@ -1,6 +1,6 @@
 import React from 'react';
 import './Our_courses_box.css'
-import { CiCircleCheck } from "react-icons/ci";
+import { BsCheckCircle } from "react-icons/bs";
 
 function Our_courses_box(props) {
     return (
@@ -19,19 +19,19 @@ function Our_courses_box(props) {
 
         <div>
         <li className='list'>
-        <CiCircleCheck />
+        <BsCheckCircle color='green' />
         <strong style={{margin:"0 0 0 6px"}}>
         Opportunities:</strong> Full Stack Developer, Software Engineer & much more.
         </li> <div>
         
 
         <div className='list' style={{display:"flex", alignItems:"center"}}>
-        <CiCircleCheck />
+        <BsCheckCircle color='green' />
         <li style={{margin:"0 0 0 6px"}}>100% live learning with expert instructors.</li>
         </div>
 
         <div className='list' style={{display:"flex", alignItems:"center"}}>
-        <CiCircleCheck />
+        <BsCheckCircle color='green' />
         <li style={{margin:"0 0 0 6px"}}>Pay After Placement</li>
         </div>
 
