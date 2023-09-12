@@ -71,7 +71,7 @@ function Our_courses({setActiveCourse,activeCourse}) {
             <Our_courses_box full_stack={backend} color={"#e5c9b7"} title={"Backend Development"}/>
         </div>
 
-        <div style={{display:"flex", justifyContent:"center", margin:"24px 0 24px 0" }} ref={mainHeadingRef}>
+        <div style={{display:"flex", justifyContent:"center", margin:"75px 0 24px 0" }} ref={mainHeadingRef}>
           <button className='viewAllCourses'>VIEW ALL COURSES</button>
         </div>
     </div>

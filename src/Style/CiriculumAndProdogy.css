@@ -3,6 +3,7 @@
     
     align-items: center;
     font-size: 50px;
+    margin-bottom: 75px;
 }
 .masaiInCiriculumHeading >span{
     color:  #ed0331;
@@ -12,14 +13,14 @@
     width: 264px;
     height: 15px;
     left: 600px;
-    top: 1335px;
+    top: 1380px;
 }
 .secondVector{
     position: absolute;
     width: 264px;
     height: 15px;
-    left: 925px;
-    top:100px;
+    left: 915px;
+    top: 1380px;
     z-index:-1;
 }
 #courseText0{
