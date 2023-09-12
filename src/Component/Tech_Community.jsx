@@ -61,73 +61,39 @@ export const Tech_Community = ({setActiveCourse,activeCourse}) => {
   ]
   return (
     <>
+    <div className={Styled.Tech} ref={mainHeadingRef}>
 
-        <Container ref={mainHeadingRef}>
-            
-             <div className={Styled.OurParterHeading} ref={mainHeadingRef}>
-                <h1> Be A Part Of Our Thriving </h1>                    
-                <h1 className={Styled.textColor}>Tech Community</h1>
-                <img src={yellowVectore} alt="" className={Styled.Image}/>
-             </div>
-            <Marquee
-              // gradient={false}
-              speed={80}
-              pauseOnHover={true}
-              pauseOnClick={true}
-              delay={0}
-              play={true}
-              direction="left"
-             
-             
-            >
-             {HiringPartner.map((el)=>(
-              <div className={Styled.childImage}>
-                 <div className={Styled.sliderImage}>
-                    <img src={el.image} alt="avnish" />
-                 </div>
-                  
-                
-                
-              </div>
-             ))}
-            </Marquee>
-             
-              <div className={Styled.ButtonDiv}>
-              <button className={Styled.JoinButton} >Join Our  Community </button>
+      <div className={Styled.OurParterHeading}>
 
-      <div className={Styled.Tech}>
-
-        <div className={Styled.OurParterHeading}>
-
-          <h1> Be A Part Of Our Thriving </h1>
-          <h1 className={Styled.textColor}>Tech Community</h1>
-          <img src={yellowVectore} alt="" className={Styled.Image} />
-        </div>
-
-        <Marquee
-          // gradient={false}
-          speed={80}
-          pauseOnHover={true}
-          pauseOnClick={true}
-          delay={0}
-          play={true}
-          direction="left"
-
-        >
-          {HiringPartner.map((el) => (
-            <div className={Styled.childImage1}>
-              <div className={Styled.sliderImage1}>
-                <img src={el.image} alt="avnish" />
-
-              </div>
-            </div>
-          ))}
-        </Marquee>
-
-        <div className={Styled.ButtonDiv}>
-          <button className={Styled.JoinButton} >Join Our  Community </button>
-        </div>
+        <h1> Be A Part Of Our Thriving </h1>
+        <h1 className={Styled.textColor}>Tech Community</h1>
+        <img src={yellowVectore} alt="" className={Styled.Image} />
       </div>
-    </>
+
+      <Marquee
+        // gradient={false}
+        speed={80}
+        pauseOnHover={true}
+        pauseOnClick={true}
+        delay={0}
+        play={true}
+        direction="left"
+
+      >
+        {HiringPartner.map((el) => (
+          <div className={Styled.childImage1}>
+            <div className={Styled.sliderImage1}>
+              <img src={el.image} alt="avnish" />
+            </div>
+          </div>
+        ))}
+      </Marquee>
+
+      <div className={Styled.ButtonDiv} >
+        <button className={Styled.JoinButton} >Join Our  Community </button>
+      </div>
+    </div>
+  </>
+
   )
 }
