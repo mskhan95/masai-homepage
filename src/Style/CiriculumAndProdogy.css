@@ -14,6 +14,7 @@
     height: 15px;
     left: 600px;
     top: 1380px;
+    display: none;
 }
 .secondVector{
     position: absolute;
@@ -22,6 +23,7 @@
     left: 915px;
     top: 1380px;
     z-index:-1;
+    display: none;
 }
 #courseText0{
     text-transform: capitalize;

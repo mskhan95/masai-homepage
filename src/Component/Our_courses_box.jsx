@@ -4,6 +4,7 @@ import { BsCheckCircle } from "react-icons/bs";
 
 function Our_courses_box(props) {
     return (
+        // yash 
         <>
         <div className='maincontainer' style={{"box-shadow": "0px 6px 34px 0px rgba(215, 216, 222, 0.41)","width":"400px", borderRadius:"2%"}}>
           <div className='TopImgdiv' style={{"backgroundColor":props.color,borderRadius:"2% 2% 0 0", display:"flex", justifyContent:"center", padding:"8% 0 8% 0" }}> <img src={props.full_stack}/> 

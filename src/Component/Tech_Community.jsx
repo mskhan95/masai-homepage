@@ -72,7 +72,7 @@ export const Tech_Community = ({setActiveCourse,activeCourse}) => {
 
       <Marquee
         // gradient={false}
-        speed={80}
+        speed={70}
         pauseOnHover={true}
         pauseOnClick={true}
         delay={0}
